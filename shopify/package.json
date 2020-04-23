@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "@xdn/core": "file:.yalc/@xdn/core",
+    "@xdn/core": "latest",
     "@xdn/prefetch": "latest"
   },
   "devDependencies": {
     "@types/node": "^13.13.2",
-    "@xdn/cli": "file:.yalc/@xdn/cli",
+    "@xdn/cli": "latest",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "serverless": "^1.64.0",
