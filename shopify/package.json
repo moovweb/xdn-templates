@@ -28,7 +28,7 @@
     "watch": [
       "src"
     ],
-    "exec": "npm run build",
+    "exec": "npm run build && xdn run",
     "ext": "ts"
   }
 }
