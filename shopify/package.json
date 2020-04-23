@@ -1,12 +1,11 @@
 {
   "dependencies": {
-    "@types/route-parser": "^0.1.3",
-    "@xdn/core": "latest",
+    "@xdn/core": "file:.yalc/@xdn/core",
     "@xdn/prefetch": "latest"
   },
   "devDependencies": {
     "@types/node": "^13.13.2",
-    "@xdn/cli": "latest",
+    "@xdn/cli": "file:.yalc/@xdn/cli",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "serverless": "^1.64.0",
