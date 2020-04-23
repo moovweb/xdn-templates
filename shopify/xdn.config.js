@@ -2,8 +2,8 @@ module.exports = {
   routes: './dist/routes.js',
   backends: {
     origin: {
-      domainOrIp: '{answers.origin}',
-      hostHeader: '{answers.origin}',
+      domainOrIp: 'moovdemo.myshopify.com',
+      hostHeader: 'moovdemo.myshopify.com',
     },
   },
 }
