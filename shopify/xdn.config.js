@@ -1,5 +1,5 @@
 module.exports = {
-  routes: "./dist/routes.js"
+  routes: './dist/routes.js',
   backends: {
     origin: {
       domainOrIp: 'www.leifshop.com',

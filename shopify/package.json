@@ -1,18 +1,29 @@
 {
   "dependencies": {
+    "@types/route-parser": "^0.1.3",
     "@xdn/core": "latest",
     "@xdn/prefetch": "latest"
   },
   "devDependencies": {
-    "@xdn/cli": "latest",
+    "@types/node": "^13.13.2",
+    "@xdn/cli": "file:.yalc/@xdn/cli",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
     "serverless": "^1.64.0",
     "serverless-dotenv-plugin": "^2.3.2",
     "serverless-offline": "^5.12.1",
     "ts-node": "^8.9.0"
   },
   "scripts": {
-    "start": "xdn run",
+    "start": "nodemon",
     "build": "xdn build",
     "deploy": "xdn deploy"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "exec": "tsc && xdn run",
+    "ext": "ts"
   }
 }

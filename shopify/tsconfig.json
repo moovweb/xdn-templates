@@ -6,8 +6,6 @@
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
-    "downlevelIteration": true,
-    "skipLibCheck": true,
     "lib": [
       "dom"
     ]
