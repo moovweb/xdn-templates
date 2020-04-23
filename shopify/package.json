@@ -17,6 +17,7 @@
   "scripts": {
     "start": "nodemon",
     "build": "xdn build",
+    "prod": "xdn run --production",
     "deploy": "xdn deploy"
   },
   "nodemonConfig": {
