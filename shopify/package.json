@@ -1,12 +1,10 @@
 {
   "name": "shopify-template",
-  "dependencies": {
-    "@xdn/core": "file:.yalc/@xdn/core",
-    "@xdn/prefetch": "file:.yalc/@xdn/prefetch"
-  },
   "devDependencies": {
     "@types/node": "^13.13.2",
-    "@xdn/cli": "file:.yalc/@xdn/cli",
+    "@xdn/cli": "^1.16.0",
+    "@xdn/core": "^1.16.0",
+    "@xdn/prefetch": "^1.16.0",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
     "serverless": "^1.64.0",
@@ -24,6 +22,7 @@
     "prod": "xdn run --production",
     "deploy": "xdn deploy",
     "xdn": "xdn",
+    "xdn:update": "npm i --save-dev @xdn/cli@latest @xdn/core@latest @xdn/prefetch@latest",
     "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli"
   },
   "nodemonConfig": {
