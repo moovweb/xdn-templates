@@ -20,16 +20,18 @@
   },
   "scripts": {
     "start": "nodemon",
-    "build": "tsc && webpack",
+    "build": "tsc && webpack && xdn build",
     "prod": "xdn run --production",
-    "deploy": "npm run build && xdn deploy",
+    "deploy": "xdn deploy",
+    "xdn": "xdn",
     "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli"
   },
   "nodemonConfig": {
     "watch": [
-      "src"
+      "src",
+      ".yalc/@xdn"
     ],
     "exec": "npm run build && xdn run",
-    "ext": "ts"
+    "ext": "js,ts"
   }
 }
