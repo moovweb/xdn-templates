@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "nodemon",
-    "build": "tsc && webpack && xdn build",
+    "build": "webpack && xdn build",
     "prod": "xdn run --production",
     "deploy": "xdn deploy",
     "xdn": "xdn",

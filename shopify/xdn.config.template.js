@@ -1,5 +1,5 @@
 module.exports = {
-  routes: './dist/routes.js',
+  routes: './src/routes.ts',
   backends: {
     origin: {
       domainOrIp: '{answers.origin}',

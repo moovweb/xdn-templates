@@ -10,7 +10,7 @@ const handler: RouteHandler = async ({
   cache(CACHE_PAGES)
   removeResponseHeader('set-cookie')
   await proxy('origin')
-  updateResponseHeader('location', /https:\/\/moovdemo.myshopify.com/gi, '') // convert absolute redirects to origin to relative so that the user isn't transferred to the origin.
+  updateResponseHeader('location', /https:\/\/moovdemo.myshopify.com\//gi, '/') // convert absolute redirects to origin to relative so that the user isn't transferred to the origin.
 }
 
 export default handler
