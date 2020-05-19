@@ -15,7 +15,7 @@ export default new Router()
     return serveStatic('dist/browser.js')
   })
   .match('/content/*path', ({ proxy }) => {
-    return proxy('origin', { path: '{path}' })
+    return proxy('origin', { path: '/*path' })
   })
   .match('/*path', ({ proxy }) => {
     return proxy('origin')
