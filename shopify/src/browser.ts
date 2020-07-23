@@ -1,4 +1,5 @@
 import install from '@xdn/prefetch/window/install'
+import cacheHost from './cacheHost'
 
 async function lateLoadContent() {
   const url = '/content' + window.location.pathname
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // @ts-ignore
   install({
     includeCacheMisses: true,
+    cacheHost,
   })
 
   if (window.location.pathname.indexOf('/content') !== 0) {

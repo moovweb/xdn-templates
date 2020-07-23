@@ -1,11 +1,13 @@
 import { skipWaiting, clientsClaim } from 'workbox-core'
 import { Prefetcher, prefetch } from '@xdn/prefetch/sw'
 import DeepFetchPlugin, { DeepFetchCallbackParam } from '@xdn/prefetch/sw/DeepFetchPlugin'
+import cacheHost from './cacheHost'
 
 skipWaiting()
 clientsClaim()
 
 new Prefetcher({
+  cacheHost,
   plugins: [
     new DeepFetchPlugin([
       {
