@@ -10,10 +10,20 @@ const FAR_FUTURE_TTL = 60 * 60 * 24 * 365 * 10;
 module.exports = (app) => {
   const { angularMiddleware } = createAngularPlugin(app);
   return new Router()
+    .match("/", ({ cache }) => {
+      cache({
+        browser: false,
+        edge: {
+          maxAgeSeconds: PAGE_TTL,
+          staleWhileRevalidateSeconds: PAGE_TTL,
+          forcePrivateCaching: true,
+        },
+      });
+    })
     .match("/rest/v2/:path*", ({ cache, proxy }) => {
       cache({
         browser: {
-          maxAgeSeconds: PAGE_TTL,
+          maxAgeSeconds: 0,
           serviceWorkerSeconds: PAGE_TTL,
         },
         edge: {
@@ -26,7 +36,7 @@ module.exports = (app) => {
     .match("/medias/:path*", ({ cache, proxy }) => {
       cache({
         browser: {
-          maxAgeSeconds: PAGE_TTL,
+          maxAgeSeconds: 0,
           serviceWorkerSeconds: PAGE_TTL,
         },
         edge: {
@@ -39,7 +49,7 @@ module.exports = (app) => {
     .match("/Open-Catalogue/:path*", ({ cache }) => {
       cache({
         browser: {
-          maxAgeSeconds: PAGE_TTL,
+          maxAgeSeconds: 0,
           serviceWorkerSeconds: PAGE_TTL,
           spa: true,
         },
@@ -52,7 +62,7 @@ module.exports = (app) => {
     .match("/product/:path*", ({ cache }) => {
       cache({
         browser: {
-          maxAgeSeconds: PAGE_TTL,
+          maxAgeSeconds: 0,
           serviceWorkerSeconds: PAGE_TTL,
           spa: true,
         },

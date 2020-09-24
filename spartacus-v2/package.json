@@ -44,7 +44,7 @@
     "@spartacus/styles": "^2.1.1",
     "@xdn/angular": "^2.13.2",
     "@xdn/cli": "^2.13.2",
-    "@xdn/core": "^2.13.2",
+    "@xdn/core": "2.13.4-next-1600955919-ae7ee66f.0",
     "@xdn/prefetch": "^2.13.2",
     "bootstrap": "4.2.1",
     "express": "^4.15.2",
