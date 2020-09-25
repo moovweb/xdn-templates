@@ -20,7 +20,7 @@
     "start": "concurrently \"webpack --watch\" \"xdn run\"",
     "build": "webpack --progress && xdn build",
     "prod": "xdn run --production",
-    "deploy": "xdn deploy",
+    "deploy": "npm run build && xdn deploy --skip-build",
     "xdn": "xdn",
     "xdn:update": "npm i --save-dev @xdn/cli@latest @xdn/core@latest @xdn/prefetch@latest",
     "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli"
