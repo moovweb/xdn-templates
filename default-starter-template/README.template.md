@@ -6,9 +6,9 @@ XDN starter demo for https://{answers.origin}
 - XDN app: ...
 
 ## Quick start
-1. [Development -> setup](#setup)
-2. [Development -> start](#start)
-3. Go to `src/routes.ts` file & define your routes to cache them on XDN
+1. Run [Development -> setup](#setup) commands
+2. Run [Development -> start](#start) commands
+3. Go to `src/routes.ts` file & define your app routes to cache them on XDN
 4. See more info on [XDN Starter Guide](https://developer.moovweb.com/guides/starter)
 
 ## Development
