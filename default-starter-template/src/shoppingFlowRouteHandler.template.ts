@@ -18,7 +18,7 @@ const shoppingFlowRouteHandler: RouteHandler = async ({
 
   // convert absolute redirects to origin to relative
   // so that the user isn't transferred to the origin.
-  updateResponseHeader('location', /https?:\/\/{answers.origin}\//gi, '/'); // add your origin here
+  updateResponseHeader('location', /https?:\/\/{answers.origin}\//gi, '/');
 };
 
 export default shoppingFlowRouteHandler;

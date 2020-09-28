@@ -5,7 +5,7 @@ function absolutizeUrl(url: string): string {
     return '/';
   }
   return url
-    .replace(/https?:\/\/{answers.origin}/, '/') // add your origin here
+    .replace(/https?:\/\/{answers.origin}/, '/')
     .replace('//', '/');
 }
 
@@ -39,7 +39,7 @@ export default function transformResponse(response: any): void {
   /**
    * Absolutize URLs
    */
-  absolutizeElementsAttribute($, '[href*="{answers.origin}"]', 'href'); // add your origin here
+  absolutizeElementsAttribute($, '[href*="{answers.origin}"]', 'href');
 
   response.body = $.html();
 }

@@ -2,6 +2,9 @@ import { Router } from '@xdn/core/router';
 import shoppingFlowRouteHandler from './shoppingFlowRouteHandler';
 import assetsRouteHandler from './assetsRouteHandler';
 
+/**
+ * Define your app routes here ...
+ */
 export default new Router()
   /**
    * Pages: Home
