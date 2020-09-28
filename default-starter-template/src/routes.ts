@@ -1,21 +1,40 @@
-import { CACHE_ASSETS } from './cache';
-import { Router } from '@xdn/core/router'
-import shoppingFlowRouteHandler from './shoppingFlowRouteHandler'
+import { Router } from '@xdn/core/router';
+import shoppingFlowRouteHandler from './shoppingFlowRouteHandler';
+import assetsRouteHandler from './assetsRouteHandler';
 
 export default new Router()
-  .get('/service-worker.js', ({ serviceWorker }) => {
-    serviceWorker('dist/service-worker.js')
-  })
-  // example routes for cacheable pages:
+  /**
+   * Pages: Home
+   */
   .get('/', shoppingFlowRouteHandler)
-  .get('/collections/:path*', shoppingFlowRouteHandler)
-  .get('/products/:path*', shoppingFlowRouteHandler)
-  // example route for cacheable assets:
-  .match('/images/:path*', ({ cache, proxy }) => {
-    cache(CACHE_ASSETS)
-    return proxy('origin')
+  /**
+   * Pages: PLP
+   */
+  .get('/subcategory/:path*', shoppingFlowRouteHandler)
+  /**
+   * Pages: PDP
+   */
+  .get('/product/:path*', shoppingFlowRouteHandler)
+  /**
+   * Pages: Search
+   */
+  .get('/search/:path*', shoppingFlowRouteHandler)
+  /**
+   * Assets: Images
+   */
+  .match('/images/:path*', assetsRouteHandler)
+  /**
+   * Assets: XDN
+   */
+  .get('/service-worker.js', ({ serviceWorker }) => {
+    serviceWorker('dist/service-worker.js');
   })
-  // fallback route for all other requests:
+  .get('/main.js', ({ serviceWorker }) => {
+    serviceWorker('dist/browser.js');
+  })
+  /**
+   * Fallback
+   */
   .fallback(({ proxy }) => {
-    proxy('origin')
-  })
+    proxy('origin');
+  });
