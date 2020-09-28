@@ -6,7 +6,7 @@
     "start:cache": "concurrently \"npx webpack --watch\" \"npx xdn run --cache\"",
     "start:prod": "npx xdn run --production",
     "build": "npx webpack --progress && npx xdn build",
-    "deploy": "npx xdn deploy",
+    "deploy": "npm run build && npx xdn deploy --skip-build",
     "xdn": "npx xdn",
     "xdn:update": "npm i -D @xdn/cli@latest && npm i -P @xdn/core@latest @xdn/prefetch@latest",
     "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli",
