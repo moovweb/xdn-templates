@@ -1,12 +1,37 @@
 {
-  "name": "shopify-template",
+  "name": "starter-template",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "concurrently \"npx webpack --watch\" \"npx xdn run\"",
+    "start:cache": "concurrently \"npx webpack --watch\" \"npx xdn run --cache\"",
+    "start:prod": "npx xdn run --production",
+    "build": "npx webpack --progress && npx xdn build",
+    "deploy": "npm run build && npx xdn deploy --skip-build",
+    "xdn": "npx xdn",
+    "xdn:update": "npm i -D @xdn/cli@latest && npm i -P @xdn/core@latest @xdn/prefetch@latest",
+    "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli",
+    "ts": "npm run ts:check",
+    "ts:check": "npx tsc",
+    "ts:watch": "npx tsc --watch",
+    "lint": "npm run lint:check",
+    "lint:check": "npx eslint src --ext .ts,.js",
+    "lint:fix": "npx eslint src --ext .ts,.js --fix"
+  },
+  "dependencies": {
+    "@xdn/core": "^2.13.4",
+    "@xdn/prefetch": "^2.13.4",
+    "cheerio": "^1.0.0-rc.3",
+    "workbox-core": "^5.1.4"
+  },
   "devDependencies": {
     "@types/node": "^13.13.2",
-    "@xdn/cli": "^2.5.0",
-    "@xdn/core": "^2.5.0",
-    "@xdn/prefetch": "^2.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@xdn/cli": "^2.13.4",
     "concurrently": "^5.2.0",
-    "prettier": "^2.0.5",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.3.0",
     "serverless": "^1.64.0",
     "serverless-dotenv-plugin": "^2.3.2",
     "serverless-offline": "^5.12.1",
@@ -15,14 +40,5 @@
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  },
-  "scripts": {
-    "start": "concurrently \"webpack --watch\" \"xdn run\"",
-    "build": "webpack --progress && xdn build",
-    "prod": "xdn run --production",
-    "deploy": "npm run build && xdn deploy --skip-build",
-    "xdn": "xdn",
-    "xdn:update": "npm i --save-dev @xdn/cli@latest @xdn/core@latest @xdn/prefetch@latest",
-    "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli"
   }
 }

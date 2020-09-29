@@ -1,6 +1,6 @@
-const ONE_HOUR = 60 * 60
-const ONE_DAY = 24 * ONE_HOUR
-const ONE_YEAR = 365 * ONE_DAY
+const ONE_HOUR = 60 * 60;
+const ONE_DAY = 24 * ONE_HOUR;
+const ONE_YEAR = 365 * ONE_DAY;
 
 /**
  * The default cache setting for pages in the shopping flow
@@ -13,7 +13,7 @@ export const CACHE_PAGES = {
     maxAgeSeconds: 0,
     serviceWorkerSeconds: ONE_HOUR,
   },
-}
+};
 
 /**
  * The default cache setting for static assets like JS, CSS, and images.
@@ -26,7 +26,7 @@ export const CACHE_ASSETS = {
     maxAgeSeconds: 0,
     serviceWorkerSeconds: ONE_DAY,
   },
-}
+};
 
 /**
  * The cache setting for the service worker.
@@ -38,4 +38,4 @@ export const CACHE_SERVICE_WORKER = {
   browser: {
     maxAgeSeconds: 0,
   },
-}
+};

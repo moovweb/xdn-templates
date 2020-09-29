@@ -1,0 +1,18 @@
+name: Deploy to XDN
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-to-xdn:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm run build
+      - run: npx xdn deploy --token=$XDN_DEPLOY_TOKEN --branch=${{github.ref}}
+        env:
+          XDN_DEPLOY_TOKEN: ${{secrets.XDN_DEPLOY_TOKEN}}

@@ -1,7 +1,7 @@
-import { skipWaiting, clientsClaim } from 'workbox-core'
-import { Prefetcher } from '@xdn/prefetch/sw'
+import { skipWaiting, clientsClaim } from 'workbox-core';
+import { Prefetcher } from '@xdn/prefetch/sw';
 
-skipWaiting()
-clientsClaim()
+skipWaiting();
+clientsClaim();
 
-new Prefetcher().route()
+new Prefetcher().route();
