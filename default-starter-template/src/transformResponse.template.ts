@@ -1,3 +1,4 @@
+import Response from '@xdn/core/router/Response';
 import cheerio from 'cheerio';
 
 function absolutizeUrl(url: string): string {
@@ -22,11 +23,10 @@ function absolutizeElementsAttribute(
   });
 }
 
-// @TODO: TS - find and use `Response` type
-export default function transformResponse(response: any): void {
+export default function transformResponse(response: Response): void {
   // console.log(`Transform script running on ${response.req.originalUrl}`); // for testing
 
-  const $ = cheerio.load(response.body);
+  const $ = cheerio.load(response.body || '');
 
   /**
    * Append XDN scripts
