@@ -1,4 +1,5 @@
 import { Router } from '@xdn/core/router';
+import { CACHE_ASSETS } from './cache';
 import shoppingFlowRouteHandler from './shoppingFlowRouteHandler';
 import assetsRouteHandler from './assetsRouteHandler';
 
@@ -29,11 +30,13 @@ export default new Router()
   /**
    * Assets: XDN
    */
-  .get('/service-worker.js', ({ serviceWorker }) => {
+  .get('/service-worker.js', ({ cache, serviceWorker }) => {
+    cache(CACHE_ASSETS);
     serviceWorker('dist/service-worker.js');
   })
-  .get('/main.js', ({ serviceWorker }) => {
-    serviceWorker('dist/browser.js');
+  .get('/main.js', ({ cache, serveStatic }) => {
+    cache(CACHE_ASSETS);
+    serveStatic('dist/browser.js');
   })
   /**
    * Fallback
