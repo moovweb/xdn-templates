@@ -30,7 +30,6 @@
     "@xdn/devtools": "^2.28.0",
     "@xdn/prefetch": "^2.28.0",
     "concurrently": "^5.2.0",
-    "prettier": "^2.0.5",
     "ts-loader": "^7.0.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3",
