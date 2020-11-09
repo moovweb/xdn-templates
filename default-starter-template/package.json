@@ -1,26 +1,41 @@
 {
-  "name": "shopify-template",
-  "devDependencies": {
-    "@types/node": "^13.13.2",
-    "@xdn/cli": "^2.28.0",
+  "name": "starter-template",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "concurrently \"npx webpack --watch\" \"npx xdn run\"",
+    "start:cache": "concurrently \"npx webpack --watch\" \"npx xdn run --cache\"",
+    "start:prod": "npx xdn run --production",
+    "build": "npx webpack --progress && npx xdn build",
+    "deploy": "npm run build && npx xdn deploy --skip-build",
+    "xdn": "npx xdn",
+    "xdn:update": "npm i -D @xdn/cli@latest && npm i -P @xdn/core@latest @xdn/prefetch@latest",
+    "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli",
+    "ts": "npm run ts:check",
+    "ts:check": "npx tsc",
+    "ts:watch": "npx tsc --watch",
+    "lint": "npm run lint:check",
+    "lint:check": "npx eslint src --ext .ts,.js",
+    "lint:fix": "npx eslint src --ext .ts,.js --fix"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "workbox-core": "^5.1.4",
     "@xdn/core": "^2.28.0",
     "@xdn/devtools": "^2.28.0",
-    "@xdn/prefetch": "^2.28.0",
+    "@xdn/prefetch": "^2.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.2",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@xdn/cli": "^2.28.0",
     "concurrently": "^5.2.0",
-    "prettier": "^2.0.5",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-plugin-import": "^2.22.1",
     "ts-loader": "^7.0.1",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
-  },
-  "scripts": {
-    "start": "concurrently \"webpack --watch\" \"xdn run\"",
-    "build": "webpack --progress && xdn build",
-    "prod": "xdn run --production",
-    "deploy": "npm run build && xdn deploy --skip-build",
-    "xdn": "xdn",
-    "xdn:update": "npm i --save-dev @xdn/cli@latest @xdn/core@latest @xdn/prefetch@latest",
-    "xdn:link": "yalc add @xdn/core @xdn/prefetch @xdn/cli"
   }
 }
