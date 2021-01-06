@@ -202,7 +202,7 @@ Configure `routes.js` to proxy API and media requests to the Commerce backend:
 ```diff
 // This file was automatically added by xdn deploy.
 // You should commit this file to source control.
-const { Router } = require('@xdn/core/Router')
+const { Router } = require('@xdn/core/router')
 const createAngularPlugin = require('@xdn/angular/router/createAngularPlugin')
 module.exports = app => {
   const { angularMiddleware } = createAngularPlugin(app)
@@ -559,7 +559,7 @@ An example cache configuration to optimally support prefetching:
 // This file was automatically added by xdn deploy.
 // You should commit this file to source control.
 
-const { Router } = require('@xdn/core/Router')
+const { Router } = require('@xdn/core/router')
 const createAngularPlugin = require('@xdn/angular/router/createAngularPlugin')
 
 const PAGE_TTL = 60 * 60 * 24

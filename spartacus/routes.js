@@ -1,7 +1,7 @@
 // This file was automatically added by xdn deploy.
 // You should commit this file to source control.
 
-const { Router } = require('@xdn/core/Router')
+const { Router } = require('@xdn/core/router')
 const createAngularPlugin = require('@xdn/angular/router/createAngularPlugin')
 
 const PAGE_TTL = 60 * 60 * 24
