@@ -1,11 +1,10 @@
-import { CACHE_ASSETS } from './cache';
 import { Router } from '@xdn/core/router'
+import { starterRoutes } from '@xdn/starter'
+import { CACHE_ASSETS } from './cache'
 import shoppingFlowRouteHandler from './shoppingFlowRouteHandler'
 
 export default new Router()
-  .get('/service-worker.js', ({ serviceWorker }) => {
-    serviceWorker('dist/service-worker.js')
-  })
+  .use(starterRoutes)
   // example routes for cacheable pages:
   .get('/', shoppingFlowRouteHandler)
   .get('/collections/:path*', shoppingFlowRouteHandler)
