@@ -2,11 +2,11 @@
   "name": "default-starter-template",
   "devDependencies": {
     "@types/node": "^13.13.2",
-    "@xdn/cli": "^2.44.0",
-    "@xdn/core": "^2.44.0",
-    "@xdn/devtools": "^2.44.0",
-    "@xdn/prefetch": "^2.44.0",
-    "@xdn/starter": "^2.44.0",
+    "@xdn/cli": "^2.46.7",
+    "@xdn/core": "^2.46.8",
+    "@xdn/devtools": "file:.yalc/@xdn/devtools",
+    "@xdn/prefetch": "^2.46.7",
+    "@xdn/starter": "^2.46.8",
     "prettier": "^2.0.5",
     "typescript": "^3.8.3"
   },
