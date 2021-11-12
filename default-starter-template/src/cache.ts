@@ -2,7 +2,7 @@ const ONE_HOUR = 60 * 60
 const ONE_DAY = 24 * ONE_HOUR
 
 /**
- * The default cache setting for pages in the shopping flow
+ * The default cache setting for pages
  */
 export const CACHE_PAGES = {
     edge: {

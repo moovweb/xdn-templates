@@ -1,7 +1,8 @@
-import install from '@xdn/prefetch/window/install'
-import installDevtools from '@xdn/devtools/install'
+import install from '@layer0/prefetch/window/install'
+import installDevtools from '@layer0/devtools/install'
 
 document.addEventListener('DOMContentLoaded', function () {
+  
   installDevtools()
   install()
 })
