@@ -45,7 +45,7 @@
     "@spartacus/styles": "^1.5.6",
     "@xdn/angular": "^2.28.0",
     "@xdn/cli": "^2.28.0",
-    "@xdn/core": "^2.28.0",
+    "@xdn/core": "^2.53.6",
     "@xdn/prefetch": "^2.28.0",
     "bootstrap": "^4.2.1",
     "cls-hooked": "^4.2.2",
@@ -58,7 +58,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.25",
+    "@angular-devkit/build-angular": "~15.0.4",
     "@angular/cli": "~8.3.26",
     "@angular/compiler-cli": "~8.2.14",
     "@angular/language-service": "~8.2.14",
@@ -76,11 +76,11 @@
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
-    "ts-loader": "^5.3.2",
+    "ts-loader": "^9.4.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
-    "webpack-cli": "^3.3.2",
+    "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^1.7.2",
     "workbox-build": "^5.1.3"
   }
