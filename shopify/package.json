@@ -3,16 +3,16 @@
   "devDependencies": {
     "@types/node": "^13.13.2",
     "@xdn/cli": "^2.28.0",
-    "@xdn/core": "^2.28.0",
+    "@xdn/core": "^2.53.6",
     "@xdn/devtools": "^2.28.0",
     "@xdn/prefetch": "^2.28.0",
     "concurrently": "^5.2.0",
     "prettier": "^2.0.5",
-    "ts-loader": "^7.0.1",
+    "ts-loader": "^9.4.2",
     "ts-node": "^8.9.0",
     "typescript": "^3.8.3",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "start": "concurrently \"webpack --watch\" \"xdn run\"",
